@@ -1,0 +1,9 @@
+mat-form-field {
+    margin-top: 20px;
+    width:100%;
+}
+.spacer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,24 @@
+.content {
+    padding-top:30px;
+}
+.row{
+    display:flex;
+    gap:10px;
+}
+.first-field mat-form-field{
+    width:70%;
+}
+.field mat-form-field{
+    width:100%;
+}
+
+.actions{
+    justify-content: center;
+   
+}
+button {
+    flex:1;
+}
+.row-mt-20 {
+    margin-top: 20px;
+}

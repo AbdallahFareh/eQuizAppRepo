@@ -1,0 +1,48 @@
+<div mat-dialog-title>AJOUTER ENSEIGNANT</div>
+<form [formGroup]="enForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content style="padding-top: 20px;">
+    <div class="row row-mt-20 first-field">
+        <mat-form-field appearance="outline">
+            <mat-label>ID</mat-label>
+            <input matInput type="text" formControlName="id" required>
+        </mat-form-field>
+       
+    </div>
+    <div class="row field">
+        <mat-form-field appearance="outline">
+            <mat-label>NOM</mat-label>
+            <input matInput type="text" formControlName="nom" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>PRENOM</mat-label>
+            <input matInput type="text" formControlName="prenom" required>
+        </mat-form-field>
+        
+    </div>
+
+    <mat-divider></mat-divider>
+
+    <div class="row row-mt-20 field">
+        <mat-form-field appearance="outline">
+            <mat-label>EMAIL</mat-label>
+            <input matInput type="email" placeholder="Ex. you.h@gmail.com" formControlName="email" required>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>PASSWORD</mat-label>
+            <input matInput type="email" placeholder="Ex. you.h@gmail.com" required>
+        </mat-form-field>
+
+    </div>
+   
+  
+
+</div>
+
+<div mat-dialog-actions class="actions">
+    <button mat-raised-button class="p-button-outlined p-button-secondary">Quitter</button>
+    <button mat-raised-button class="p-button-outlined" type="submit">{{data?'Modifier':'Enregistrer'}}</button>
+  
+</div>
+
+</form>
+

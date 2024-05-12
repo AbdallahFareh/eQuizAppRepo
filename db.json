@@ -1,0 +1,37 @@
+{
+   "users":[
+    {
+        "name":"Mohammed",
+        "email":"Mohammed@gmail.com",
+        "password":"HIKA2023",
+        "id":1
+    },
+    {
+        "name":"Aziz",
+        "email":"Aziz@gmail.com",
+        "password":"BO9AL2023",
+        "id":2
+    },
+    {
+        "name":"Hassan",
+        "email":"HASSAN@gmail.com",
+        "password":"SAWSAN2023",
+        "id":3
+    },
+    {
+        "name":"Hassan",
+        "email":"HASSAN@gmail.com",
+        "password":"SOSO2023",
+        "id":4
+    }
+
+
+   ],
+   "admin":[
+    {
+    "name":"Oustad",
+    "email":"Oustad@gmail.com",
+    "password":"SA3SA3",
+    "id":4}
+   ]
+}
