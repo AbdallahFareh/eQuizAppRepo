@@ -5,6 +5,7 @@ import { AdminTemplateComponent } from './admin-template/admin-template.componen
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { EnseignantComponent } from './enseignant/enseignant.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NewExamComponent } from './new-exam/new-exam.component';
 
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
     {path:"etudiants",component:EtudiantComponent},
     {path:"enseignants",component:EnseignantComponent},
     {path:"dashboard",component:DashboardComponent},
+    {path:"test",component:NewExamComponent}
 
 ]},
 

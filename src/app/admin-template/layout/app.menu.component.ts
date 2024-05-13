@@ -43,6 +43,18 @@ export class AppMenuComponent implements OnInit {
                         ]
                     },
                     {
+                        label: 'Exam',
+                        icon: 'pi pi-fw pi-user',
+                        items: [
+                            {
+                                label: 'Passer un test',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/admin/test']
+                            },
+                           
+                        ]
+                    },
+                    {
                         label: 'Auth',
                         icon: 'pi pi-fw pi-user',
                         items: [
@@ -54,6 +66,7 @@ export class AppMenuComponent implements OnInit {
                            
                         ]
                     },
+
                    
                 ]
             },
