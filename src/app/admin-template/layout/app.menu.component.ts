@@ -20,12 +20,12 @@ export class AppMenuComponent implements OnInit {
                     { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }
                 ]
             },
-          
+
             {
                 label: 'Pages',
                 icon: 'pi pi-fw pi-briefcase',
                 items: [
-                    
+
                     {
                         label: 'Crud',
                         icon: 'pi pi-fw pi-pencil',
@@ -52,11 +52,16 @@ export class AppMenuComponent implements OnInit {
                         icon: 'pi pi-fw pi-user',
                         items: [
                             {
+                                label: 'Ajouter un test',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/admin/ajouterTest']
+                            },
+                          {
                                 label: 'Passer un test',
                                 icon: 'pi pi-fw pi-sign-in',
-                                routerLink: ['/admin/test']
+                                routerLink: ['/admin/passerTest']
                             },
-                           
+
                         ]
                     },
                     {
@@ -68,14 +73,14 @@ export class AppMenuComponent implements OnInit {
                                 icon: 'pi pi-fw pi-sign-in',
                                 routerLink: ['/login']
                             },
-                           
+
                         ]
                     },
 
-                   
+
                 ]
             },
-          
+
         ];
     }
 }

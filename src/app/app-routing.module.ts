@@ -7,6 +7,7 @@ import { EnseignantComponent } from './enseignant/enseignant.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClasseComponent } from './classe/classe.component';
 import { NewExamComponent } from './new-exam/new-exam.component';
+import {PassExamComponent} from "./pass-exam/pass-exam.component";
 
 
 const routes: Routes = [
@@ -18,7 +19,8 @@ const routes: Routes = [
     {path:"enseignants",component:EnseignantComponent},
     {path:"classes",component:ClasseComponent},
     {path:"dashboard",component:DashboardComponent},
-    {path:"test",component:NewExamComponent}
+    {path:"ajouterTest",component:NewExamComponent},
+    {path:"passerTest",component:PassExamComponent},
 
 ]},
 

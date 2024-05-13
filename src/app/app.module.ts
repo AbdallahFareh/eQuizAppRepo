@@ -61,7 +61,8 @@ import { AddClasseComponent } from './add-classe/add-classe.component';
 import { ClasseComponent } from './classe/classe.component';
 import { NewExamComponent } from './new-exam/new-exam.component';
 import {MatRadioModule} from '@angular/material/radio';
-import {MatStepperModule} from '@angular/material/stepper'
+import {MatStepperModule} from '@angular/material/stepper';
+import { PassExamComponent } from './pass-exam/pass-exam.component'
 
 
 
@@ -90,6 +91,7 @@ import {MatStepperModule} from '@angular/material/stepper'
     AddClasseComponent,
     ClasseComponent,
     NewExamComponent,
+    PassExamComponent,
     
     
 
