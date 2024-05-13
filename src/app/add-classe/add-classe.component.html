@@ -1,0 +1,27 @@
+<div mat-dialog-title>AJOUTER CLASSE</div>
+<form [formGroup]="clForm" (ngSubmit)="onFormSubmit()">
+<div mat-dialog-content style="padding-top: 20px;">
+    <div class="row row-mt-20 first-field">
+        <mat-form-field appearance="outline">
+            <mat-label>LIBELLE</mat-label>
+            <input matInput type="text" formControlName="libelle" required>
+        </mat-form-field>
+       
+    </div>
+    
+
+    <mat-divider></mat-divider>
+
+    
+  
+
+</div>
+
+<div mat-dialog-actions class="actions">
+    <button mat-raised-button class="p-button-outlined p-button-secondary">Quitter</button>
+    <button mat-raised-button color="primary" type="submit">{{data?'Modifier':'Enregistrer'}}</button>
+  
+</div>
+
+</form>
+
