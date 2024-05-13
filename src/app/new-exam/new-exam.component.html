@@ -1,26 +1,24 @@
 <div class="new-exam">
     <mat-horizontal-stepper linear #stepper [selectedIndex]="stepperIndex">
         <mat-step label="Nom de la matière" [completed]="startAdd" >
-            <div class="AddSubject">
-                <div>Nom de la matière : </div>
-                <mat-form-field appearance="fill" color="warn">
-                    <mat-label>Nom de la matière</mat-label>
-                    <input matInput type="text" [formControl]="name" >
-                </mat-form-field>
-                <button color="warn" mat-raised-button matStepperNext (click)="start()">Commencer</button>
-            </div>
-
-            <div class="row field">
+            <div class="row field AddSubject row-mt-20">
                 <mat-form-field appearance="outline">
                     <mat-label>MATIERE</mat-label>
                     <input matInput type="text" [formControl]="name" required>
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>CLASSE</mat-label>
-                    <input matInput type="text" formControlName="prenom" required>
-                </mat-form-field>
-                
+                    <mat-select formControlName="classe">
+                        <mat-option *ngFor="let classe of classes" [value]="classe" required>
+                          {{ classe }}
+                        </mat-option>
+                      </mat-select>
+                  </mat-form-field>
+
             </div>
+            <button mat-raised-button  mat-raised-button matStepperNext color="primary" type="submit" (click)="start()">COMMENCER</button>
+
+          
 
         </mat-step>
         <mat-step label="Questions de {{name.value}}" [completed]="previewView">

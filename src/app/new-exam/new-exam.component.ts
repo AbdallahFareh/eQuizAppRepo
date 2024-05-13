@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatRadioChange } from '@angular/material/radio';
 import { examService } from '../services/exam.layout.service';
+import { ClassesService } from '../services/classes.service';
 
 
 @Component({
@@ -22,10 +23,11 @@ export class NewExamComponent implements OnInit {
   previewView:boolean=false;
   subjectName:String="";
   stepperIndex=0;
+  public classes:String[]=[];
 
 
  
-  constructor(private fb:FormBuilder,private service:examService) { }
+  constructor(private fb:FormBuilder,private service:examService,private __clService:ClassesService) { }
 
   ngOnInit(): void {
       this.createForm();
@@ -105,6 +107,16 @@ cancel() {
      if(this.previewView){
         this.stepperIndex=2;
      }
+  }
+  loadClasses() {
+    this.__clService.loadClasses().subscribe(
+      libelles => {
+        this.classes = libelles;
+      },
+      error => {
+        console.error('Error loading classes', error);
+      }
+    );
   }
   
 }
