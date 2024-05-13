@@ -31,28 +31,16 @@ export class AddEnseignantComponent implements OnInit{
         email: ''
     
     })}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
    
   
     
   
 
    
-    ngOnInit() {
-      this.loadClasses();
-      this.enForm.patchValue(this.data);
-    }
-
-  
-    loadClasses() {
-      this.__clService.loadClasses().subscribe(
-        libelles => {
-          this.classes = libelles;
-        },
-        error => {
-          console.error('Error loading classes', error);
-        }
-      );
-    }
+    
 
 
 

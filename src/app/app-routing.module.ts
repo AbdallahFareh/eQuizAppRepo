@@ -5,6 +5,7 @@ import { AdminTemplateComponent } from './admin-template/admin-template.componen
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { EnseignantComponent } from './enseignant/enseignant.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ClasseComponent } from './classe/classe.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:"admin",component:AdminTemplateComponent,children:[
     {path:"etudiants",component:EtudiantComponent},
     {path:"enseignants",component:EnseignantComponent},
+    {path:"classes",component:ClasseComponent},
     {path:"dashboard",component:DashboardComponent},
 
 ]},

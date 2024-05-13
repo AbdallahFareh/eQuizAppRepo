@@ -57,6 +57,8 @@ import { AddEnseignantComponent } from './add-enseignant/add-enseignant.componen
 import {CheckboxModule} from 'primeng/checkbox';
 import { PasswordModule } from "primeng/password";
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { AddClasseComponent } from './add-classe/add-classe.component';
+import { ClasseComponent } from './classe/classe.component';
 
 
 
@@ -80,7 +82,9 @@ import { SelectButtonModule } from 'primeng/selectbutton';
     DashboardComponent,
     LoginComponent,
     AddEtudiantComponent,
-    AddEnseignantComponent
+    AddEnseignantComponent,
+    AddClasseComponent,
+    ClasseComponent
   ],
   imports: [
     BrowserModule,

@@ -24,4 +24,17 @@ export class ClassesService {
       })
     );
   }
+  
+  addClasse(data:any):Observable<any> {
+    return this.http.post('http://127.0.0.1:8080/Classe/add',data)
+  }
+
+  getClasseList():Observable<any> {
+    return this.http.get<any>('http://127.0.0.1:8080/Classe/list');
+  }
+
+  deleteClasse(id:string):Observable<any> {
+    return this.http.delete(`http://127.0.0.1:8080/Classe/delete/${id}`);
+  }
+
 }
