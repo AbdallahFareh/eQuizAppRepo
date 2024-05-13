@@ -28,7 +28,7 @@ import {MatInputModule} from '@angular/material/input'
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -59,6 +59,10 @@ import { PasswordModule } from "primeng/password";
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { AddClasseComponent } from './add-classe/add-classe.component';
 import { ClasseComponent } from './classe/classe.component';
+import { NewExamComponent } from './new-exam/new-exam.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatStepperModule} from '@angular/material/stepper'
+
 
 
 
@@ -84,7 +88,11 @@ import { ClasseComponent } from './classe/classe.component';
     AddEtudiantComponent,
     AddEnseignantComponent,
     AddClasseComponent,
-    ClasseComponent
+    ClasseComponent,
+    NewExamComponent,
+    
+    
+
   ],
   imports: [
     BrowserModule,
@@ -118,7 +126,9 @@ import { ClasseComponent } from './classe/classe.component';
     RouterModule,
     CheckboxModule,
     PasswordModule,
-    SelectButtonModule
+    SelectButtonModule,
+    MatRadioModule,
+    MatStepperModule,
   ],
   providers: [
     provideAnimationsAsync()
