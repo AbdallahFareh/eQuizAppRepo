@@ -1,7 +1,7 @@
 <div class="new-exam">
     <mat-horizontal-stepper linear #stepper [selectedIndex]="stepperIndex">
         <mat-step label="Nom de la matière" [completed]="startAdd" >
-            <div class="row field AddSubject row-mt-20">
+            <div class="rowm field AddSubject row-mt-20">
                 <mat-form-field appearance="outline">
                     <mat-label>MATIERE</mat-label>
                     <input matInput type="text" [formControl]="name" required>
@@ -16,7 +16,9 @@
                   </mat-form-field>
 
             </div>
-            <button mat-raised-button  mat-raised-button matStepperNext color="primary" type="submit" (click)="start()">COMMENCER</button>
+            <div >
+            <button mat-raised-button  mat-raised-button matStepperNext color="primary"  type="submit" (click)="start()">COMMENCER</button>
+             </div>
 
           
 
