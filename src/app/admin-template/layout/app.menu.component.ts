@@ -1,6 +1,7 @@
 import { OnInit } from '@angular/core';
 import { Component } from '@angular/core';
 import { LayoutService } from "../../services/app.layout.service";
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-menu',
@@ -9,11 +10,106 @@ import { LayoutService } from "../../services/app.layout.service";
 export class AppMenuComponent implements OnInit {
 
     model: any[] = [];
+    modelEt:any[]=[];
+    modelEns:any[]=[];
+    modelAdmin:any[]=[];
 
-    constructor(public layoutService: LayoutService) { }
+    constructor(public layoutService: LayoutService,private __auth:AuthService) { }
 
     ngOnInit() {
-        this.model = [
+        this.modelEt = [
+            {
+                label: 'Home',
+                items: [
+                    { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/admin/dashboard'] }
+                ]
+            },
+
+            {
+                label: 'Pages',
+                icon: 'pi pi-fw pi-briefcase',
+                items: [
+
+                   
+                    {
+                        label: 'Exam',
+                        icon: 'pi pi-fw pi-user',
+                        items: [
+                          {
+                                label: 'Passer un test',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/admin/passerTest']
+                            },
+
+                        ]
+                    },
+                    {
+                        label: 'Auth',
+                        icon: 'pi pi-fw pi-user',
+                        items: [
+                            {
+                                label: 'Logout',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/login']
+                            },
+
+                        ]
+                    },
+
+
+                ]
+            },
+
+        ];
+
+        this.modelEns = [
+            {
+                label: 'Home',
+                items: [
+                    { label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/admin/dashboard'] }
+                ]
+            },
+
+            {
+                label: 'Pages',
+                icon: 'pi pi-fw pi-briefcase',
+                items: [
+                    {
+                        label: 'Exam',
+                        icon: 'pi pi-fw pi-user',
+                        items: [
+                            {
+                                label: 'Ajouter un test',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/admin/ajouterTest']
+                            },
+                            {
+                                label: 'Passer un test',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/admin/passerTest']
+                            },
+
+                        ]
+                    },
+                    {
+                        label: 'Auth',
+                        icon: 'pi pi-fw pi-user',
+                        items: [
+                            {
+                                label: 'Logout',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/login']
+                            },
+
+                        ]
+                    },
+
+
+                ]
+            },
+
+        ];
+        this.modelAdmin= [
             {
                 label: 'Home',
                 items: [
@@ -48,21 +144,21 @@ export class AppMenuComponent implements OnInit {
                         ]
                     },
                     {
-                        label: 'Exam',
-                        icon: 'pi pi-fw pi-user',
+                        label: 'Pages',
+                        icon: 'pi pi-fw pi-briefcase',
                         items: [
                             {
-                                label: 'Ajouter un test',
-                                icon: 'pi pi-fw pi-sign-in',
-                                routerLink: ['/admin/ajouterTest']
-                            },
-                          {
-                                label: 'Passer un test',
-                                icon: 'pi pi-fw pi-sign-in',
-                                routerLink: ['/admin/passerTest']
-                            },
-
-                        ]
+                                label: 'Exam',
+                                icon: 'pi pi-fw pi-user',
+                                items: [
+                                    {
+                                        label: 'Ajouter un test',
+                                        icon: 'pi pi-fw pi-sign-in',
+                                        routerLink: ['/admin/ajouterTest']
+                                    },
+        
+                                ]
+                            }]
                     },
                     {
                         label: 'Auth',
@@ -82,5 +178,27 @@ export class AppMenuComponent implements OnInit {
             },
 
         ];
+
+        
+        let etRoles="STUDENT";
+        let enRoles="PROFESSEUR";
+        let adRoles="ADMIN";
+        let userRoles:string[] =this.__auth.roles;
+  
+         for(let role of userRoles){
+          if(userRoles.includes(etRoles)){
+            this.model=this.modelEt;
+          }
+          if(userRoles.includes(enRoles)){
+            this.model=this.modelEns;
+          }
+          if(userRoles.includes(adRoles)){
+            this.model=this.modelAdmin;
+          }
+
+         }
+       
     }
+
+    
 }

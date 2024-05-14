@@ -15,6 +15,7 @@ export class AuthService implements OnInit {
   res:any;
   users:any[]=[];
   username!:string;
+  isAuthenticated:boolean=false;
 
 
   constructor( public __http:HttpClient ,private router:Router) { }
@@ -30,13 +31,18 @@ export class AuthService implements OnInit {
 
  
    setRole(role:any){
-        
+    this.isAuthenticated=true;
     this.roles=role;
     console.log(this.roles)
     }
 
     setUsername(username: any) {
      this.username=username;
+  }
+   logout(){
+    this.isAuthenticated=false;
+    this.roles=[];
+    this.username="";
   }
     
       

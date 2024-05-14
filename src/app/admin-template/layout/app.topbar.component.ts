@@ -9,6 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class AppTopBarComponent implements OnInit{
 
+
     items!: MenuItem[];
     username!:string;
 
@@ -44,5 +45,8 @@ export class AppTopBarComponent implements OnInit{
         this.theme = theme;
         this.colorScheme = colorScheme;
     }
+    logout() {
+        this.__auth.logout();
+        }
     
 }

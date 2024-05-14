@@ -63,6 +63,7 @@ import { NewExamComponent } from './new-exam/new-exam.component';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatStepperModule} from '@angular/material/stepper';
 import { PassExamComponent } from './pass-exam/pass-exam.component'
+import { AuGuard } from './guards/auth.guard';
 
 
 
@@ -133,7 +134,7 @@ import { PassExamComponent } from './pass-exam/pass-exam.component'
     MatStepperModule,
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),AuGuard
   ],
   bootstrap: [AppComponent]
 })

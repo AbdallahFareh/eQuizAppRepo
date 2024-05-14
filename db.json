@@ -4,28 +4,28 @@
       "username": "Mohammed",
       "email": "Mohammed@gmail.com",
       "password": "HIKA2023",
-      "roles":["Student"],
+      "roles":["STUDENT"],
       "id": "1"
     },
     {
       "username": "Aziz",
       "email": "Aziz@gmail.com",
       "password": "BO9AL2023",
-      "roles":["Student"],
+      "roles":["STUDENT"],
       "id": "2"
     },
     {
       "username": "Hassan",
       "email": "HASSAN@gmail.com",
       "password": "SAWSAN2023",
-      "roles":["Student"],
+      "roles":["STUDENT"],
       "id": "3"
     },
     {
       "username": "Hassan",
       "email": "HASSAN@gmail.com",
       "password": "SOSO2023",
-      "roles":["Student"],
+      "roles":["STUDENT"],
       "id": "4"
     }
   ],
@@ -34,7 +34,7 @@
       "username": "Oustad",
       "email": "Oustad@gmail.com",
       "password": "SA3SA3",
-      "roles":["Student","Professor","Admin"],
+      "roles":["ADMIN"],
       "id": "1"
     }
   ],
@@ -43,7 +43,7 @@
       "username":"Aziz",
       "email":"Moh123@gmail.com",
       "password": "MIMO23",
-      "roles":["Professor"],
+      "roles":["PROFESSEUR"],
       "id": "1"
     }
   ],
