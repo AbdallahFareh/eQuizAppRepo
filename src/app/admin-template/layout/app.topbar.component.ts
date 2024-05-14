@@ -1,14 +1,16 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { LayoutService } from "../../services/app.layout.service";
+import { AuthService } from '../../services/auth.service';
 
 @Component({
     selector: 'app-topbar',
     templateUrl: './app.topbar.component.html'
 })
-export class AppTopBarComponent {
+export class AppTopBarComponent implements OnInit{
 
     items!: MenuItem[];
+    username!:string;
 
     @ViewChild('menubutton') menuButton!: ElementRef;
 
@@ -16,7 +18,10 @@ export class AppTopBarComponent {
 
     @ViewChild('topbarmenu') menu!: ElementRef;
 
-    constructor(public layoutService: LayoutService) { }
+    constructor(public layoutService: LayoutService,private __auth:AuthService) { }
+    ngOnInit(): void {
+        this.username=this.__auth.username;
+    }
     set theme(val: string) {
         this.layoutService.config.update((config) => ({
             ...config,
@@ -39,4 +44,5 @@ export class AppTopBarComponent {
         this.theme = theme;
         this.colorScheme = colorScheme;
     }
+    
 }

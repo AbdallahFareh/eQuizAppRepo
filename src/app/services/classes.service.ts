@@ -16,7 +16,7 @@ export class ClassesService {
   constructor(private http: HttpClient) { }
 
   loadClasses(): Observable<string[]> {
-    return this.http.get<Classe[]>('http://127.0.0.1:8080/Classe/list').pipe(
+    return this.http.get<Classe[]>('http://127.0.0.1:3000/classes').pipe(
       map(classes => classes.map(classe => classe.libelle)), // Extract only the libelle values
       catchError(error => {
         console.log('Error loading classes', error);

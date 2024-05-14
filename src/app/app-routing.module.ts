@@ -13,7 +13,7 @@ import {PassExamComponent} from "./pass-exam/pass-exam.component";
 const routes: Routes = [
   {path:"",component:LoginComponent},
   {path:"login",component:LoginComponent},
-  {path:"home",component:AdminTemplateComponent},
+  
   {path:"admin",component:AdminTemplateComponent,children:[
     {path:"etudiants",component:EtudiantComponent},
     {path:"enseignants",component:EnseignantComponent},
