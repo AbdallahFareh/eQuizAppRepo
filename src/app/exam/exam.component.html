@@ -1,0 +1,43 @@
+<mat-card>
+  <mat-card-header style="margin: auto">
+    <mat-card-title>
+      <h1>{{subject.name}}</h1>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    gfd
+    <div class="question" *ngFor="let item of subject.questions; let index=index;">
+
+      <h3>Question {{index+1}} : {{item.question}}</h3>
+      <mat-radio-group class="radio4">
+        <div class="mat-radio-button">
+          <mat-radio-button *ngIf="role.includes('STUDENT')" value="{{item.answer1}}"></mat-radio-button>
+          <mat-label><strong>A. {{item.answer1}}</strong></mat-label>
+        </div>
+        <div class="mat-radio-button">
+          <mat-radio-button *ngIf="role.includes('STUDENT')" value="{{item.answer2}}"></mat-radio-button>
+          <mat-label><strong>A. {{item.answer2}}</strong></mat-label>
+        </div>
+        <div class="mat-radio-button">
+          <mat-radio-button *ngIf="role.includes('STUDENT')" value="{{item.answer3}}"></mat-radio-button>
+          <mat-label><strong>A. {{item.answer3}}</strong></mat-label>
+        </div>
+        <div class="mat-radio-button">
+          <mat-radio-button *ngIf="role.includes('STUDENT')" value="{{item.answer4}}"></mat-radio-button>
+          <mat-label><strong>A. {{item.answer4}}</strong></mat-label>
+        </div>
+
+
+
+      </mat-radio-group>
+
+      <button *ngIf="role.includes('PROFESSEUR')" (click)="delete(index)" mat-raised-button color="warn">Delete</button>
+
+    </div>
+
+
+  </mat-card-content>
+  <mat-card-actions style="margin: auto; padding: 30px">
+    <button style="width: 200px; height: 50px; font-size: large" *ngIf="role.includes('STUDENT')"  mat-raised-button color="primary">Result</button>
+  </mat-card-actions>
+</mat-card>

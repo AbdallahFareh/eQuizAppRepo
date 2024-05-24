@@ -19,7 +19,7 @@ export class examService {
     return this.http.get('http://localhost:3000/subjects')
   }
   getSubjectById(id:number){
-    return this.http.get('http://localhost:3000/subjects/'+id)
+    return this.http.get('http://localhost:3000/subjects/' + id)
   }
 
   deleteSubject(id:number){

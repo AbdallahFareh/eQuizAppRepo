@@ -10,12 +10,13 @@ import { NewExamComponent } from './new-exam/new-exam.component';
 import {PassExamComponent} from "./pass-exam/pass-exam.component";
 import { AuGuard } from './guards/auth.guard';
 import { Authorisationguard } from './guards/authorisation.guard';
+import {ExamComponent} from "./exam/exam.component";
 
 
 const routes: Routes = [
   {path:"",component:LoginComponent},
   {path:"login",component:LoginComponent},
-  
+
   {path:"admin",component:AdminTemplateComponent,canActivate:[AuGuard],
   children:[
     {
@@ -25,6 +26,7 @@ const routes: Routes = [
     {path:"dashboard",component:DashboardComponent},
     {path:"ajouterTest",component:NewExamComponent},
     {path:"passerTest",component:PassExamComponent},
+    {path:"exam/:id",component:ExamComponent},
 
 ]},
 

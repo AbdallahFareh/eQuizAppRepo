@@ -1,0 +1,88 @@
+/*.mat-card-content {*/
+/*  margin: auto;*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  align-items: center;*/
+/*  flex-direction: column;*/
+/*}*/
+
+/*mat-card-title{*/
+/*  h1{*/
+/*    color: white;*/
+/*    padding: 7px;*/
+/*  }*/
+/*  background-color: darkseagreen;*/
+/*  width: 250px;*/
+/*  margin-top: 20px;*/
+/*  text-align: center;*/
+/*  border-radius: 10px; !* Optional: Add border radius for rounded corners *!*/
+
+/*}*/
+
+/*.question {*/
+/*  width: 70%;*/
+/*  text-align: center;*/
+/*  margin: 30px auto;*/
+/*  border: 1px solid darkseagreen; !* Soft green border *!*/
+/*  padding: 20px; !* Optional: Add padding for better appearance *!*/
+/*  border-radius: 10px; !* Optional: Add border radius for rounded corners *!*/
+/*}*/
+
+/*.radio4 {*/
+/*  display: flex;*/
+/*  flex-wrap: wrap;*/
+/*  justify-content: center;*/
+/*}*/
+
+/*.radio4 .mat-radio-button {*/
+/*  flex: 0 0 50%;*/
+/*  box-sizing: border-box;*/
+/*  margin-bottom: 10px; !* Adjust margin as needed *!*/
+/*}*/
+----------------------------------
+
+.mat-card-content {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+mat-card-title {
+  h1 {
+    color: white;
+    padding: 7px;
+  }
+  background-color: darkseagreen;
+  width: 250px;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
+
+.question {
+  width: 70%;
+  text-align: left; /* Align text to the left */
+  margin: 30px auto;
+  border: 1px solid darkseagreen; /* Soft green border */
+  padding: 20px; /* Optional: Add padding for better appearance */
+  border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
+
+.question h3 {
+  text-align: left; /* Align the question title to the left */
+}
+
+.radio4 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radio4 .mat-radio-button {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+  margin-bottom: 10px; /* Adjust margin as needed */
+}
+
