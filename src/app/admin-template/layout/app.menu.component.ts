@@ -30,13 +30,13 @@ export class AppMenuComponent implements OnInit {
                 icon: 'pi pi-fw pi-briefcase',
                 items: [
 
-                   
+
                     {
                         label: 'Exam',
                         icon: 'pi pi-fw pi-user',
                         items: [
                           {
-                                label: 'Passer un test',
+                                label: 'Liste des Examens',
                                 icon: 'pi pi-fw pi-sign-in',
                                 routerLink: ['/admin/passerTest']
                             },
@@ -79,12 +79,12 @@ export class AppMenuComponent implements OnInit {
                         icon: 'pi pi-fw pi-user',
                         items: [
                             {
-                                label: 'Ajouter un test',
+                                label: 'Ajouter un Examen',
                                 icon: 'pi pi-fw pi-sign-in',
                                 routerLink: ['/admin/ajouterTest']
                             },
                             {
-                                label: 'Passer un test',
+                                label: 'Liste des Examens',
                                 icon: 'pi pi-fw pi-sign-in',
                                 routerLink: ['/admin/passerTest']
                             },
@@ -144,21 +144,16 @@ export class AppMenuComponent implements OnInit {
                         ]
                     },
                     {
-                        label: 'Pages',
-                        icon: 'pi pi-fw pi-briefcase',
-                        items: [
-                            {
-                                label: 'Exam',
-                                icon: 'pi pi-fw pi-user',
-                                items: [
-                                    {
-                                        label: 'Ajouter un test',
-                                        icon: 'pi pi-fw pi-sign-in',
-                                        routerLink: ['/admin/ajouterTest']
-                                    },
-        
-                                ]
-                            }]
+                      label: 'Exam',
+                      icon: 'pi pi-fw pi-user',
+                      items: [
+                        {
+                          label: 'Liste des Examens',
+                          icon: 'pi pi-fw pi-sign-in',
+                          routerLink: ['/admin/passerTest']
+                        },
+
+                      ]
                     },
                     {
                         label: 'Auth',
@@ -179,12 +174,12 @@ export class AppMenuComponent implements OnInit {
 
         ];
 
-        
+
         let etRoles="STUDENT";
         let enRoles="PROFESSEUR";
         let adRoles="ADMIN";
         let userRoles:string[] =this.__auth.roles;
-  
+
          for(let role of userRoles){
           if(userRoles.includes(etRoles)){
             this.model=this.modelEt;
@@ -197,8 +192,8 @@ export class AppMenuComponent implements OnInit {
           }
 
          }
-       
+
     }
 
-    
+
 }

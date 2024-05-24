@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService implements OnInit {
-   
+
 
 
   roles:string[]= [];
@@ -21,15 +21,16 @@ export class AuthService implements OnInit {
   constructor( public __http:HttpClient ,private router:Router) { }
 
   ngOnInit(): void {
-     
-  
+
+
 }
 
 
 
- 
+  getRole(){
+    return this.roles;
+  }
 
- 
    setRole(role:any){
     this.isAuthenticated=true;
     this.roles=role;
@@ -44,7 +45,7 @@ export class AuthService implements OnInit {
     this.roles=[];
     this.username="";
   }
-    
-      
-        
+
+
+
 }

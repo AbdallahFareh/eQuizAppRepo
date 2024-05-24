@@ -1,57 +1,68 @@
 {
   "student": [
     {
-      "username": "Mohammed",
-      "email": "Mohammed@gmail.com",
-      "password": "HIKA2023",
-      "roles":["STUDENT"],
+      "username": "test",
+      "email": "test@gmail.com",
+      "password": "123",
+      "roles": [
+        "STUDENT"
+      ],
       "id": "1"
     },
     {
       "username": "Aziz",
       "email": "Aziz@gmail.com",
       "password": "BO9AL2023",
-      "roles":["STUDENT"],
+      "roles": [
+        "STUDENT"
+      ],
       "id": "2"
     },
     {
       "username": "Hassan",
       "email": "HASSAN@gmail.com",
       "password": "SAWSAN2023",
-      "roles":["STUDENT"],
+      "roles": [
+        "STUDENT"
+      ],
       "id": "3"
     },
     {
       "username": "Hassan",
       "email": "HASSAN@gmail.com",
       "password": "SOSO2023",
-      "roles":["STUDENT"],
+      "roles": [
+        "STUDENT"
+      ],
       "id": "4"
     }
   ],
   "admin": [
     {
-      "username": "Oustad",
-      "email": "Oustad@gmail.com",
-      "password": "SA3SA3",
-      "roles":["ADMIN"],
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
       "id": "1"
     }
   ],
-  "professor":[
+  "professor": [
     {
-      "username":"Aziz",
-      "email":"Moh123@gmail.com",
-      "password": "MIMO23",
-      "roles":["PROFESSEUR"],
+      "username": "Aziz",
+      "email": "prof@gmail.com",
+      "password": "123",
+      "roles": [
+        "PROFESSEUR"
+      ],
       "id": "1"
     }
   ],
   "subjects": [
-    
     {
-      "id": "46ad",
-      "name": "",
+      "id": "2",
+      "name": "subject 2",
       "questions": [
         {
           "question": "j",
@@ -62,7 +73,72 @@
           "correctAnswer": "mm"
         }
       ]
-    
+    },
+    {
+      "id": "3",
+      "name": "subject 3",
+      "questions": [
+        {
+          "question": "j",
+          "answer1": "j",
+          "answer2": "j",
+          "answer3": "j",
+          "answer4": "j",
+          "correctAnswer": "mm"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "subject 4",
+      "questions": [
+        {
+          "question": "1",
+          "answer1": "a",
+          "answer2": "s",
+          "answer3": "d",
+          "answer4": "f",
+          "correctAnswer": "a"
+        },
+        {
+          "question": "2",
+          "answer1": "a",
+          "answer2": "s",
+          "answer3": "d",
+          "answer4": "f",
+          "correctAnswer": "b"
+        }
+      ]
+    },
+    {
+      "id": "d046",
+      "name": "AYMAN TISSIR",
+      "questions": [
+        {
+          "question": "SMIYA DYALO",
+          "answer1": "YMAN",
+          "answer2": "TISSIR",
+          "answer3": "FCGVHBJNK",
+          "answer4": "GVHBNKJML,",
+          "correctAnswer": "TISSIR"
+        },
+        {
+          "question": "YJHTRGFEWDMJGHFHG",
+          "answer1": "FTDGRS",
+          "answer2": "NTBRGFED",
+          "answer3": "MNFBD",
+          "answer4": "MHGNGFBDFV",
+          "correctAnswer": "MNFBD"
+        },
+        {
+          "question": ",JHGMHFNTDRGSEFRGTHMJ,",
+          "answer1": "MJGHFNDBRGSFE",
+          "answer2": "GFHDGFF",
+          "answer3": "FGDFGDF",
+          "answer4": "NFGF",
+          "correctAnswer": "NFGF"
+        }
+      ]
     }
   ]
 }

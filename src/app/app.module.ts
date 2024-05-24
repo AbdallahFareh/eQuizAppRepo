@@ -26,7 +26,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { AddEtudiantComponent } from './add-etudiant/add-etudiant.component'
 import {MatInputModule} from '@angular/material/input'
 import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
+import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
@@ -64,6 +64,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatStepperModule} from '@angular/material/stepper';
 import { PassExamComponent } from './pass-exam/pass-exam.component'
 import { AuGuard } from './guards/auth.guard';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 
 
@@ -93,16 +94,16 @@ import { AuGuard } from './guards/auth.guard';
     ClasseComponent,
     NewExamComponent,
     PassExamComponent,
-    
-    
+
+
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,CommonModule,MatIconModule,MatListModule,MatButtonModule,MatMenuModule,
-    MatDrawerContainer,MatDivider,MatToolbarModule,CommonModule,MatSidenavModule,MatTableModule,
-    MatCardModule,MatFormFieldModule,MatPaginatorModule,HttpClientModule,MatDialogModule,MatInputModule,MatDatepickerModule,MatNativeDateModule,MatSelectModule,
-    ReactiveFormsModule,MatSnackBarModule,AppRoutingModule, CommonModule,
+    AppRoutingModule, CommonModule, MatIconModule, MatListModule, MatButtonModule, MatMenuModule,
+    MatDrawerContainer, MatDivider, MatToolbarModule, CommonModule, MatSidenavModule, MatTableModule,
+    MatCardModule, MatFormFieldModule, MatPaginatorModule, HttpClientModule, MatDialogModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatSelectModule,
+    ReactiveFormsModule, MatSnackBarModule, AppRoutingModule, CommonModule,
     FileUploadModule,
     FormsModule,
     ButtonModule,
@@ -115,7 +116,7 @@ import { AuGuard } from './guards/auth.guard';
     DropdownModule,
     RadioButtonModule,
     InputNumberModule,
-    DialogModule,  
+    DialogModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
@@ -132,6 +133,7 @@ import { AuGuard } from './guards/auth.guard';
     SelectButtonModule,
     MatRadioModule,
     MatStepperModule,
+    MatGridListModule, MatRippleModule,
   ],
   providers: [
     provideAnimationsAsync(),AuGuard
