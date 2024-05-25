@@ -20,7 +20,7 @@
             <button mat-raised-button  mat-raised-button matStepperNext color="primary"  type="submit" (click)="start()">COMMENCER</button>
              </div>
 
-          
+
 
         </mat-step>
         <mat-step label="Questions de {{name.value}}" [completed]="previewView">
@@ -46,7 +46,7 @@
                                 <mat-label>Réponse B</mat-label>
                                 <input matInput type="text" formControlName="answer2"  >
                             </mat-form-field>
-                        
+
                         </div>
 
                         <div class="col-md-6 col-sm-12">
@@ -64,6 +64,12 @@
                                 <input matInput type="text" formControlName="answer4"  >
                             </mat-form-field>
                         </div>
+                      <div class="col-md-6 col-sm-12">
+                        <mat-form-field color="warn">
+                          <mat-label>Note de question : </mat-label>
+                          <input matInput type="text" formControlName="note"  >
+                        </mat-form-field>
+                      </div>
                     </div>
                     <div class="questBtn">
                         <div>
@@ -74,7 +80,7 @@
                             <button mat-raised-button color="accent"  (click)="clearForm()" matStepperPrevious>Supprimer</button>
                             <button mat-raised-button color="primary" [disabled]="questionsForm.invalid" (click)="creatQuestion()">Enregistrer</button>
                         </div>
-                        
+
                     </div>
                 </form>
             </div>

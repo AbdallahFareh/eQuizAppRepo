@@ -26,12 +26,12 @@ export class NewExamComponent implements OnInit {
   public classes:String[]=[];
 
 
- 
+
   constructor(private fb:FormBuilder,private service:examService,private __clService:ClassesService) { }
 
   ngOnInit(): void {
       this.createForm();
-      
+
   }
   createForm(){
      this.questionsForm=this.fb.group({
@@ -40,10 +40,11 @@ export class NewExamComponent implements OnInit {
       answer2:['',[Validators.required]],
       answer3:['',[Validators.required]],
       answer4:['',[Validators.required]],
+       note:['',[Validators.required]],
       correctAnswer:['']
-      
+
      })
-    
+
   }
   creatQuestion() {
    if (this.correctNum){
@@ -53,6 +54,7 @@ export class NewExamComponent implements OnInit {
     answer2:this.questionsForm.value.answer2,
     answer3:this.questionsForm.value.answer3,
     answer4:this.questionsForm.value.answer4,
+     note:this.questionsForm.value.note,
     correctAnswer:this.questionsForm.value[this.correctNum]
 
   }
@@ -73,13 +75,13 @@ console.log(this.questions);
     start() {
       if(this.name.value==""){
         console.log("enter your matiere")
-        
+
       }else
       {
         this.subjectName=this.name.value;
 
          this.startAdd=true;
-         
+
       }
       if(this.startAdd){
         this.stepperIndex=1;
@@ -93,7 +95,7 @@ cancel() {
   this.questionsForm.reset();
   this.questions=[];
   this.subjectName="";
-  
+
 
 
 
@@ -118,5 +120,5 @@ cancel() {
       }
     );
   }
-  
+
 }

@@ -13,6 +13,9 @@ export class ExamComponent implements OnInit{
   user:any;
   subject:any;
   role:any;
+  total:number = 0;
+  resultget:boolean = false;
+  subjectTotal:number = 0;
   constructor(private route: ActivatedRoute,
               private service: examService,
               private auth: AuthService) {
@@ -32,10 +35,14 @@ export class ExamComponent implements OnInit{
   }
 
   delete(index: number) {
-    let id = this.subject.questions[index].id;
+    let id = this.subject.id;
     this.subject.questions.splice(index, 1);
-    this.service.deleteSubject(id).subscribe((res:any) =>{
-      alert("Subject supprimer");
+    const model = {
+      name: this.subject.name,
+      questions: this.subject.questions
+    }
+    this.service.deleteQuestion(model, id).subscribe((res:any)=>{
+      alert("Question supprime");
     })
   }
   getUserInfo(){
@@ -49,4 +56,27 @@ export class ExamComponent implements OnInit{
   }
 
 
+  getAnswer(event: any) {
+    let data = event.value;
+    let questionIndex = event.source.name;
+    // console.log(questionIndex)
+      this.subject.questions[questionIndex].studentAnswer = data
+     console.log(this.subject.questions)
+     //console.log(event)
+
+  }
+
+  getResult() {
+    this.resultget = true;
+    this.total = 0;
+    this.subjectTotal = 0;
+    for(let x in this.subject.questions){
+      this.subjectTotal = this.subjectTotal + this.subject.questions[x].note;
+      if(this.subject.questions[x].studentAnswer == this.subject.questions[x].correctAnswer){
+        this.total = this.total + this.subject.questions[x].note;
+      }
+    }
+    console.log(this.total)
+
+  }
 }

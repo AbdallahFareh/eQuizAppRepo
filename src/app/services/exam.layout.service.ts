@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { EnvironmentInjector, Injectable, effect, signal } from '@angular/core';
+import {EnvironmentInjector, Injectable, effect, signal, model} from '@angular/core';
 import { Subject } from 'rxjs';
 import { environment } from '../../environment/environment';
 
@@ -26,8 +26,8 @@ export class examService {
     return this.http.delete('http://localhost:3000/subjects/' + id)
   }
 
-  deleteQuestion(id:number){
-    return this.http.delete('http://localhost:3000/subjects/' + id)
+  deleteQuestion(model:any, id:number){
+    return this.http.put('http://localhost:3000/subjects/' + id, model)
   }
 
 }
