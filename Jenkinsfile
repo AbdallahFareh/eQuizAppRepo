@@ -6,7 +6,7 @@ pipeline {
     stages{
         stage("Clone Repository") {
             steps{
-                git 'https://github.com/AbdallahFareh/eQuizAppRepo'
+                 git branch: 'main', url: 'https://github.com/AbdallahFareh/eQuizAppRepo'
             }
         }
 
