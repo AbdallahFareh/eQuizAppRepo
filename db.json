@@ -36,7 +36,7 @@
           "id": "ba76",
           "name": "tdgrsfea",
           "degree": 0,
-          "totalSubject": "08"
+          "totalSubject": "8"
         }
       ],
       "id": "1"
@@ -51,8 +51,8 @@
       "id": "2"
     },
     {
-      "username": "Hassan",
-      "email": "HASSAN@gmail.com",
+      "username": "ahmed",
+      "email": "ahmed@gmail.com",
       "password": "123",
       "roles": [
         "STUDENT"

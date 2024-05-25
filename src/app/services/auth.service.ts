@@ -36,6 +36,9 @@ export class AuthService implements OnInit {
   getStudent(){
     return this.user;
   }
+  getAllStudent() {
+    return this.__http.get('http://localhost:3000/student/')
+  }
   updateStudent(id:any, model:any){
     return this.__http.put('http://localhost:3000/student/' + id, model)
   }

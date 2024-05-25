@@ -70,7 +70,7 @@ createForm(){
 
 
         this.LoginForm.reset();
-        this.router.navigate(['/admin'])
+        this.router.navigate(['/admin/dashboard'])
        }else {
         alert("user not found")
        }
