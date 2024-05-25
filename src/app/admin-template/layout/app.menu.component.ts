@@ -43,18 +43,11 @@ export class AppMenuComponent implements OnInit {
 
                         ]
                     },
-                    {
-                        label: 'Auth',
-                        icon: 'pi pi-fw pi-user',
-                        items: [
-                            {
-                                label: 'Logout',
-                                icon: 'pi pi-fw pi-sign-in',
-                                routerLink: ['/login']
-                            },
-
-                        ]
-                    },
+                  {
+                    label: 'Logout',
+                    icon: 'pi pi-fw pi-sign-in',
+                    routerLink: ['/login']
+                  },
 
 
                 ]
@@ -91,18 +84,11 @@ export class AppMenuComponent implements OnInit {
 
                         ]
                     },
-                    {
-                        label: 'Auth',
-                        icon: 'pi pi-fw pi-user',
-                        items: [
-                            {
-                                label: 'Logout',
-                                icon: 'pi pi-fw pi-sign-in',
-                                routerLink: ['/login']
-                            },
-
-                        ]
-                    },
+                  {
+                    label: 'Logout',
+                    icon: 'pi pi-fw pi-sign-in',
+                    routerLink: ['/login']
+                  },
 
 
                 ]
@@ -156,16 +142,9 @@ export class AppMenuComponent implements OnInit {
                       ]
                     },
                     {
-                        label: 'Auth',
-                        icon: 'pi pi-fw pi-user',
-                        items: [
-                            {
-                                label: 'Logout',
-                                icon: 'pi pi-fw pi-sign-in',
-                                routerLink: ['/login']
-                            },
-
-                        ]
+                      label: 'Logout',
+                      icon: 'pi pi-fw pi-sign-in',
+                      routerLink: ['/login']
                     },
 
 

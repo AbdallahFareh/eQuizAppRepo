@@ -5,7 +5,6 @@
     </mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    gfd
     <div class="question" *ngFor="let item of subject.questions; let index=index;">
 
       <h3>Question {{index+1}} : {{item.question}}</h3>
@@ -16,20 +15,18 @@
         </div>
         <div class="mat-radio-button">
           <mat-radio-button *ngIf="role.includes('STUDENT')" value="{{item.answer2}}"></mat-radio-button>
-          <mat-label><strong>A. {{item.answer2}}</strong></mat-label>
+          <mat-label><strong>B. {{item.answer2}}</strong></mat-label>
         </div>
         <div class="mat-radio-button">
           <mat-radio-button *ngIf="role.includes('STUDENT')" value="{{item.answer3}}"></mat-radio-button>
-          <mat-label><strong>A. {{item.answer3}}</strong></mat-label>
+          <mat-label><strong>C. {{item.answer3}}</strong></mat-label>
         </div>
         <div class="mat-radio-button">
           <mat-radio-button *ngIf="role.includes('STUDENT')" value="{{item.answer4}}"></mat-radio-button>
-          <mat-label><strong>A. {{item.answer4}}</strong></mat-label>
+          <mat-label><strong>D. {{item.answer4}}</strong></mat-label>
         </div>
-
-
-
       </mat-radio-group>
+      <p *ngIf="role.includes('PROFESSEUR')"><strong>Reponse Correcte : {{item.correctAnswer}}</strong></p>
 
       <button *ngIf="role.includes('PROFESSEUR')" (click)="delete(index)" mat-raised-button color="warn">Delete</button>
 
