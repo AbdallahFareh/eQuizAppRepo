@@ -10,19 +10,19 @@
       <h3>Question {{index+1}} : {{item.question}}</h3>
       <div class="radio4" >
         <div class="mat-radio-button">
-          <mat-radio-button *ngIf="role.includes('STUDENT')" (change)="getAnswer($event)" [disabled]="resultget"  name="{{index}}" value="{{item.answer1}}"></mat-radio-button>
+          <mat-radio-button *ngIf="role.includes('STUDENT') || !validExam" (change)="getAnswer($event)" [disabled]="resultget"  name="{{index}}" value="{{item.answer1}}"></mat-radio-button>
           <mat-label><strong>A. {{item.answer1}}</strong></mat-label>
         </div>
         <div class="mat-radio-button">
-          <mat-radio-button *ngIf="role.includes('STUDENT')" (change)="getAnswer($event)" [disabled]="resultget"  name="{{index}}" value="{{item.answer2}}"></mat-radio-button>
+          <mat-radio-button *ngIf="role.includes('STUDENT') || !validExam" (change)="getAnswer($event)" [disabled]="resultget"  name="{{index}}" value="{{item.answer2}}"></mat-radio-button>
           <mat-label><strong>B. {{item.answer2}}</strong></mat-label>
         </div>
         <div class="mat-radio-button">
-          <mat-radio-button *ngIf="role.includes('STUDENT')" (change)="getAnswer($event)" [disabled]="resultget" name="{{index}}" value="{{item.answer3}}"></mat-radio-button>
+          <mat-radio-button *ngIf="role.includes('STUDENT') || !validExam" (change)="getAnswer($event)" [disabled]="resultget" name="{{index}}" value="{{item.answer3}}"></mat-radio-button>
           <mat-label><strong>C. {{item.answer3}}</strong></mat-label>
         </div>
         <div class="mat-radio-button">
-          <mat-radio-button *ngIf="role.includes('STUDENT')" (change)="getAnswer($event)" [disabled]="resultget" name="{{index}}" value="{{item.answer4}}"></mat-radio-button>
+          <mat-radio-button *ngIf="role.includes('STUDENT') || !validExam" (change)="getAnswer($event)" [disabled]="resultget" name="{{index}}" value="{{item.answer4}}"></mat-radio-button>
           <mat-label><strong>D. {{item.answer4}}</strong></mat-label>
         </div>
       </div>
@@ -35,7 +35,7 @@
 
   </mat-card-content>
   <mat-card-actions style="margin: auto; padding: 30px">
-    <button style="width: 200px; height: 50px; font-size: large" *ngIf="role.includes('STUDENT') && !resultget"  (click)="getResult()" mat-raised-button color="primary">Result</button>
-    <h1 *ngIf="resultget" >{{total}}/{{subjectTotal}}</h1>
+    <button style="width: 200px; height: 50px; font-size: large" *ngIf="role.includes('STUDENT') && !resultget && validExam "  (click)="getResult()" mat-raised-button color="primary">Result</button>
+    <h1 *ngIf="resultget || !validExam" >{{total}}/{{subjectTotal}}</h1>
   </mat-card-actions>
 </mat-card>

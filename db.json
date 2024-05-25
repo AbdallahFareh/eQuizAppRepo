@@ -7,6 +7,38 @@
       "roles": [
         "STUDENT"
       ],
+      "subjects": [
+        {
+          "id": "d046",
+          "name": "AYMAN TISSIR",
+          "degree": 16,
+          "totalSubject": 16
+        },
+        {
+          "id": "4",
+          "name": "subject 4",
+          "degree": 1,
+          "totalSubject": 3
+        },
+        {
+          "id": "3",
+          "name": "subject 3",
+          "degree": 0,
+          "totalSubject": 3
+        },
+        {
+          "id": "eab5",
+          "name": "maths",
+          "degree": 0,
+          "totalSubject": 5
+        },
+        {
+          "id": "ba76",
+          "name": "tdgrsfea",
+          "degree": 0,
+          "totalSubject": "08"
+        }
+      ],
       "id": "1"
     },
     {
@@ -21,7 +53,7 @@
     {
       "username": "Hassan",
       "email": "HASSAN@gmail.com",
-      "password": "SAWSAN2023",
+      "password": "123",
       "roles": [
         "STUDENT"
       ],
@@ -60,21 +92,6 @@
     }
   ],
   "subjects": [
-    {
-      "id": "2",
-      "name": "subject 2",
-      "questions": [
-        {
-          "question": "j",
-          "answer1": "j",
-          "answer2": "j",
-          "answer3": "j",
-          "answer4": "j",
-          "correctAnswer": "mm",
-          "note": 8
-        }
-      ]
-    },
     {
       "id": "3",
       "name": "subject 3",

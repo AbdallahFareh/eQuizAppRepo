@@ -13,9 +13,10 @@ export class AuthService implements OnInit {
 
   roles:string[]= [];
   res:any;
-  users:any[]=[];
+  user:any={};
   username!:string;
   isAuthenticated:boolean=false;
+  userId:any;
 
 
   constructor( public __http:HttpClient ,private router:Router) { }
@@ -27,8 +28,16 @@ export class AuthService implements OnInit {
 
 
 
+
   getRole(){
     return this.roles;
+  }
+
+  getStudent(){
+    return this.user;
+  }
+  updateStudent(id:any, model:any){
+    return this.__http.put('http://localhost:3000/student/' + id, model)
   }
 
    setRole(role:any){

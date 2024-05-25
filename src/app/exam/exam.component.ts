@@ -11,11 +11,14 @@ import {AuthService} from "../services/auth.service";
 export class ExamComponent implements OnInit{
   id:any;
   user:any;
+  userData:any;
+  userSubjects:any[]=[];
   subject:any;
   role:any;
   total:number = 0;
   resultget:boolean = false;
   subjectTotal:number = 0;
+  validExam: boolean = true;
   constructor(private route: ActivatedRoute,
               private service: examService,
               private auth: AuthService) {
@@ -51,9 +54,32 @@ export class ExamComponent implements OnInit{
     // })
 
     this.role = this.auth.getRole();
+    // console.log(this.auth.user.id)
+    this.userData = this.auth.getStudent();
+    this.userSubjects = this.userData?.subjects ? this.userData?.subjects : [];
+    console.log(this.userData.email)
+
+    this.checkValidExam();
 
 
   }
+
+  checkValidExam(){
+
+    for (let x in this.userSubjects) {
+      if(this.userSubjects[x].id == this.id){
+        this.total = this.userSubjects[x].degree;
+        this.subjectTotal = this.userSubjects[x].totalSubject;
+        this.validExam = false;
+
+
+
+      }
+    }
+    console.log(this.validExam)
+  }
+
+
 
 
   getAnswer(event: any) {
@@ -76,6 +102,25 @@ export class ExamComponent implements OnInit{
         this.total = this.total + this.subject.questions[x].note;
       }
     }
+
+    this.userSubjects.push(
+      {
+        id: this.id,
+        name: this.subject.name,
+        degree: this.total,
+        totalSubject: this.subjectTotal
+      }
+    )
+    const model = {
+      username: this.userData.username,
+      email: this.userData.email,
+      password: this.userData.password,
+      roles: this.userData.roles,
+      subjects: this.userSubjects
+    }
+    this.auth.updateStudent(this.userData.id, model).subscribe((res:any)=>{
+      alert("Examen termine");
+    })
     console.log(this.total)
 
   }

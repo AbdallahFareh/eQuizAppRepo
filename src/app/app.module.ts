@@ -66,6 +66,7 @@ import { PassExamComponent } from './pass-exam/pass-exam.component'
 import { AuGuard } from './guards/auth.guard';
 import {MatGridListModule} from "@angular/material/grid-list";
 import { ExamComponent } from './exam/exam.component';
+import { EtudiantExamComponent } from './etudiant-exam/etudiant-exam.component';
 
 
 
@@ -96,6 +97,7 @@ import { ExamComponent } from './exam/exam.component';
     NewExamComponent,
     PassExamComponent,
     ExamComponent,
+    EtudiantExamComponent,
 
 
 

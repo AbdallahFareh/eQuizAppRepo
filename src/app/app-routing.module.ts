@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClasseComponent } from './classe/classe.component';
 import { NewExamComponent } from './new-exam/new-exam.component';
 import {PassExamComponent} from "./pass-exam/pass-exam.component";
+import {EtudiantExamComponent} from "./etudiant-exam/etudiant-exam.component";
 import { AuGuard } from './guards/auth.guard';
 import { Authorisationguard } from './guards/authorisation.guard';
 import {ExamComponent} from "./exam/exam.component";
@@ -27,6 +28,7 @@ const routes: Routes = [
     {path:"ajouterTest",component:NewExamComponent},
     {path:"passerTest",component:PassExamComponent},
     {path:"exam/:id",component:ExamComponent},
+    {path:"etudiantExam",component:EtudiantExamComponent},
 
 ]},
 

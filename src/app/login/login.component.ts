@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit{
 
   ngOnInit(): void {
      this.createForm();
-  
+
 }
 createForm(){
     this.LoginForm=this.fb.group({
@@ -47,35 +47,37 @@ createForm(){
  }
 
 
- 
+
  getRole($event: any) {
     this.type= $event.value;
-  
+
     }
- 
+
     submit() {
         this.__http.get<any>("http://localhost:3000/"+this.type).subscribe(res=>{
-        
+
        const user= res.find((a:any)=>{
-            
+
               res=a;
               return a.email === this.LoginForm.value.email && a.password===this.LoginForm.value.password
        })
        if(user){
         this.__auth.setRole(res.roles);
         this.__auth.setUsername(res.username);
+        this.__auth.userId = user.id;
+         this.__auth.user = user;
         alert("Login Success"+this.roles);
-        
+
 
         this.LoginForm.reset();
         this.router.navigate(['/admin'])
        }else {
         alert("user not found")
        }
-    
+
     })
 
-      
+
         }
 
 }

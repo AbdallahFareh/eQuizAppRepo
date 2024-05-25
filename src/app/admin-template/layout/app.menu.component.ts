@@ -41,6 +41,7 @@ export class AppMenuComponent implements OnInit {
                                 routerLink: ['/admin/passerTest']
                             },
 
+
                         ]
                     },
                   {
@@ -80,6 +81,11 @@ export class AppMenuComponent implements OnInit {
                                 label: 'Liste des Examens',
                                 icon: 'pi pi-fw pi-sign-in',
                                 routerLink: ['/admin/passerTest']
+                            },
+                            {
+                                label: 'Examens termines',
+                                icon: 'pi pi-fw pi-sign-in',
+                                routerLink: ['/admin/etudiantExam']
                             },
 
                         ]
@@ -137,6 +143,11 @@ export class AppMenuComponent implements OnInit {
                           label: 'Liste des Examens',
                           icon: 'pi pi-fw pi-sign-in',
                           routerLink: ['/admin/passerTest']
+                        },
+                        {
+                          label: 'Examens termines',
+                          icon: 'pi pi-fw pi-sign-in',
+                          routerLink: ['/admin/etudiantExam']
                         },
 
                       ]
