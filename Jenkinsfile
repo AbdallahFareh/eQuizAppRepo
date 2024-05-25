@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     tools {
-        dockerTool 'quizzCICD'
+        dockerTool 'Docker'
     }
     stages{
         stage{'Clone Repository'}{
