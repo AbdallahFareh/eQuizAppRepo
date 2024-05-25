@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     tools {
-        dockerTool ''
+        dockerTool 'quizzCICD'
     }
     stages{
         stage{'Clone Repository'}{
@@ -21,7 +21,7 @@ pipeline {
         stage{'Run Docker Container'}{
             steps{
                 script{
-                     sh '/usr/local/bin/docker run -p 8090:80quizz-app-front:v1 .'
+                     sh '/usr/local/bin/docker run -p 8090:80 quizz-app-front:v1 .'
                 }
             }
         }
