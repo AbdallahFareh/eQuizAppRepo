@@ -36,7 +36,13 @@
           "id": "ba76",
           "name": "tdgrsfea",
           "degree": 0,
-          "totalSubject": "8"
+          "totalSubject": 8
+        },
+        {
+          "id": "7247",
+          "name": "arabic",
+          "degree": 8,
+          "totalSubject": 10
         }
       ],
       "id": "1"
@@ -56,6 +62,14 @@
       "password": "123",
       "roles": [
         "STUDENT"
+      ],
+      "subjects": [
+        {
+          "id": "d046",
+          "name": "AYMAN TISSIR",
+          "degree": 16,
+          "totalSubject": 16
+        }
       ],
       "id": "3"
     },
@@ -189,8 +203,59 @@
           "answer2": "hngbdfd",
           "answer3": "gnbfvd",
           "answer4": "ngbfv",
-          "note": "8",
+          "note": 8,
           "correctAnswer": "ngbfv"
+        }
+      ]
+    },
+    {
+      "id": "7247",
+      "name": "arabic",
+      "questions": [
+        {
+          "question": "2*2",
+          "answer1": "3",
+          "answer2": "4",
+          "answer3": "1",
+          "answer4": "5",
+          "note": 2,
+          "correctAnswer": "4"
+        },
+        {
+          "question": "5+5",
+          "answer1": "10",
+          "answer2": "1",
+          "answer3": "100",
+          "answer4": "0",
+          "note": 2,
+          "correctAnswer": "10"
+        },
+        {
+          "question": "racine carre de 4",
+          "answer1": "1",
+          "answer2": "3",
+          "answer3": "2",
+          "answer4": "10",
+          "note": 2,
+          "correctAnswer": "2"
+        },
+        {
+          "question": "le carre de 3",
+          "answer1": "3",
+          "answer2": "4",
+          "answer3": "2",
+          "answer4": "9",
+          "note": 2,
+          "correctAnswer": "9"
+        },
+        {
+          "question": "1*0",
+          "answer1": "5",
+          "answer2": "4",
+          "answer3": "2",
+          "answer4": "0",
+          "note": 2,
+          "correctAnswer": "0"
         }
       ]
     }

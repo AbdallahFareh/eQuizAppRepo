@@ -1,5 +1,9 @@
 <div class="layout-topbar">
-    <a class="layout-topbar-logo" routerLink="/admin/dashboard">
+    <a  *ngIf="roles.includes('PROFESSEUR') || roles.includes('ADMIN')" class="layout-topbar-logo" routerLink="/admin/dashboard">
+        <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="logo">
+        <span>QuizzAPP</span>
+    </a>
+    <a *ngIf="roles.includes('STUDENT')" class="layout-topbar-logo" routerLink="/admin/passerTest">
         <img src="assets/layout/images/{{layoutService.config().colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="logo">
         <span>QuizzAPP</span>
     </a>

@@ -1,4 +1,4 @@
-<div style="display:flex; justify-content: space-between; margin-bottom: 30px">
+<div *ngIf="roles.includes('ADMIN')" style="display:flex; justify-content: space-between; margin-bottom: 30px">
   <div class="card mb-0 " style="width: 32%">
   <div class="flex justify-content-between mb-3">
     <div>
@@ -39,6 +39,6 @@
   <span class="text-500">since last visit</span>
 </div>
 </div>
-<div>
+<div *ngIf="roles.includes('ADMIN') || roles.includes('PROFESSEUR')">
   <app-etudiant-exam></app-etudiant-exam>
 </div>

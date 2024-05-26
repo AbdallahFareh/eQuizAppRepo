@@ -19,6 +19,7 @@ export class AppTopBarComponent implements OnInit{
 
     @ViewChild('topbarmenu') menu!: ElementRef;
 
+    roles:any = this.__auth.roles;
     constructor(public layoutService: LayoutService,private __auth:AuthService) { }
     ngOnInit(): void {
         this.username=this.__auth.username;
@@ -48,5 +49,5 @@ export class AppTopBarComponent implements OnInit{
     logout() {
         this.__auth.logout();
         }
-    
+
 }

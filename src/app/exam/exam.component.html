@@ -10,19 +10,19 @@
       <h3>Question {{index+1}} : {{item.question}}</h3>
       <div class="radio4" >
         <div class="mat-radio-button">
-          <mat-radio-button *ngIf="role.includes('STUDENT') || !validExam" (change)="getAnswer($event)" [disabled]="resultget"  name="{{index}}" value="{{item.answer1}}"></mat-radio-button>
+          <mat-radio-button *ngIf="role.includes('STUDENT')" (change)="getAnswer($event)" [disabled]="resultget || !validExam"  name="{{index}}" value="{{item.answer1}}"></mat-radio-button>
           <mat-label><strong>A. {{item.answer1}}</strong></mat-label>
         </div>
         <div class="mat-radio-button">
-          <mat-radio-button *ngIf="role.includes('STUDENT') || !validExam" (change)="getAnswer($event)" [disabled]="resultget"  name="{{index}}" value="{{item.answer2}}"></mat-radio-button>
+          <mat-radio-button *ngIf="role.includes('STUDENT')" (change)="getAnswer($event)" [disabled]="resultget || !validExam"  name="{{index}}" value="{{item.answer2}}"></mat-radio-button>
           <mat-label><strong>B. {{item.answer2}}</strong></mat-label>
         </div>
         <div class="mat-radio-button">
-          <mat-radio-button *ngIf="role.includes('STUDENT') || !validExam" (change)="getAnswer($event)" [disabled]="resultget" name="{{index}}" value="{{item.answer3}}"></mat-radio-button>
+          <mat-radio-button *ngIf="role.includes('STUDENT')" (change)="getAnswer($event)" [disabled]="resultget || !validExam" name="{{index}}" value="{{item.answer3}}"></mat-radio-button>
           <mat-label><strong>C. {{item.answer3}}</strong></mat-label>
         </div>
         <div class="mat-radio-button">
-          <mat-radio-button *ngIf="role.includes('STUDENT') || !validExam" (change)="getAnswer($event)" [disabled]="resultget" name="{{index}}" value="{{item.answer4}}"></mat-radio-button>
+          <mat-radio-button *ngIf="role.includes('STUDENT')" (change)="getAnswer($event)" [disabled]="resultget || !validExam" name="{{index}}" value="{{item.answer4}}"></mat-radio-button>
           <mat-label><strong>D. {{item.answer4}}</strong></mat-label>
         </div>
       </div>

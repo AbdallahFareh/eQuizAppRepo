@@ -66,11 +66,23 @@ createForm(){
         this.__auth.setUsername(res.username);
         this.__auth.userId = user.id;
          this.__auth.user = user;
+         console.log(res.roles)
         alert("Login Success"+this.roles);
 
-
         this.LoginForm.reset();
-        this.router.navigate(['/admin/dashboard'])
+         if (res.roles.includes('STUDENT')) {
+            this.router.navigate(['/admin/passerTest'])
+         }
+         if (res.roles.includes('ADMIN')) {
+            this.router.navigate(['/admin/dashboard'])
+         }
+         if (res.roles.includes('PROFESSEUR')) {
+            this.router.navigate(['/admin/dashboard'])
+         }
+
+
+
+
        }else {
         alert("user not found")
        }
