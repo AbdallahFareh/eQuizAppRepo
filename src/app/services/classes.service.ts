@@ -10,7 +10,7 @@ interface Classe {
   providedIn: 'root'
 })
 export class ClassesService {
- 
+
 
 
   constructor(private http: HttpClient) { }
@@ -24,7 +24,7 @@ export class ClassesService {
       })
     );
   }
-  
+
   addClasse(data:any):Observable<any> {
     return this.http.post('http://127.0.0.1:8080/Classe/add',data)
   }
