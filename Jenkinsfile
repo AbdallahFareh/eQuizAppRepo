@@ -17,12 +17,12 @@ pipeline {
             agent {
                 docker {
                     image 'node:latest'
-                    args '-v /var/lib/jenkins/workspace/quizzCICD:/workspace'
+                    args '-u 0:0' // Exécute le conteneur en tant que root
                 }
             }
             steps {
                 script {
-                    sh 'npm install'
+                    sh 'npm install --unsafe-perm' // Utiliser --unsafe-perm pour éviter les problèmes de permissions
                 }
             }
         }
@@ -31,7 +31,7 @@ pipeline {
             agent {
                 docker {
                     image 'node:latest'
-                    args '-v /var/lib/jenkins/workspace/quizzCICD:/workspace'
+                    args '-u 0:0' // Exécute le conteneur en tant que root
                 }
             }
             steps {
