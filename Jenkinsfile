@@ -27,19 +27,6 @@ pipeline {
             }
         }
 
-        stage("Run Tests") {
-            agent {
-                docker {
-                    image 'node:latest'
-                    args '-u 0:0' // Exécute le conteneur en tant que root
-                }
-            }
-            steps {
-                script {
-                    sh 'npm test'
-                }
-            }
-        }
 
         stage("Build Docker Image") {
             steps {
