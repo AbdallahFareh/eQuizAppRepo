@@ -39,7 +39,9 @@ pipeline {
         stage("Login to Docker Hub") {
             steps {
                 script {
-                    sh "echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin"
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'DOCKER_PWD', usernameVariable: 'DOCKER_USER')]) {
+                        sh 'docker login -u $DOCKER_USER -p $DOCKER_PWD'
+                    }
                 }
             }
         }
