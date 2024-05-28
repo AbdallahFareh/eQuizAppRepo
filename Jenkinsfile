@@ -13,7 +13,7 @@ pipeline {
          stage("Build Docker Image") {
             steps{
                 script{
-                  sh '/usr/local/bin/docker build -t quizz-app-front:v1 .'
+                  sh 'docker build -t my-angular-app .'
                 }
             }
         }
@@ -21,7 +21,7 @@ pipeline {
         stage("Run Docker Container"){
             steps{
                 script{
-                     sh '/usr/local/bin/docker run -p 8090:80 quizz-app-front:v1'
+                     sh 'docker run -p 4200:4200 my-angular-app'
                 }
             }
         }

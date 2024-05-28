@@ -1,18 +1,12 @@
-FROM node:14 as builder
+FROM node:latest as build
 
-WORKDIR /app
 
-COPY package*.json ./
-
-RUN npm install 
+WORKDIR /front-end
 
 COPY . .
-RUN npm run build --prod
 
-FROM nginx:alpine
-COPY --from=builder /app/dist/quizz-app-front /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+RUN npm install -g @angular/cli
 
+RUN npm install
 
-
+CMD ["ng", "serve", "--host", "0.0.0.0"]
