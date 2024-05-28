@@ -1,12 +1,12 @@
 pipeline {
-    agent any 
+    agent any
     tools {
         dockerTool 'Docker'
     }
     environment {
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub') // Utilisez l'ID configuré ici
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub') // Assurez-vous que les identifiants Docker Hub sont configurés dans Jenkins
     }
-    stages{
+    stages {
         stage("Clone Repository") {
             steps {
                 git branch: 'main', url: 'https://github.com/AbdallahFareh/eQuizAppRepo'
@@ -14,17 +14,26 @@ pipeline {
         }
 
         stage("Install Dependencies") {
+            agent {
+                docker {
+                    image 'node:latest'
+                    args '-v /var/lib/jenkins/workspace/quizzCICD:/workspace'
+                }
+            }
             steps {
                 script {
                     sh 'npm install'
-                    sh 'npm install primeng --save'
-                    sh 'npm install primeicons --save'
-                    sh 'npm install primeflex --save'
                 }
             }
         }
 
         stage("Run Tests") {
+            agent {
+                docker {
+                    image 'node:latest'
+                    args '-v /var/lib/jenkins/workspace/quizzCICD:/workspace'
+                }
+            }
             steps {
                 script {
                     sh 'npm test'
