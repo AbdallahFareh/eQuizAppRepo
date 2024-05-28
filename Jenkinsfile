@@ -49,7 +49,6 @@ pipeline {
         stage("Push Docker Image") {
             steps {
                 script {
-                    sh 'docker tag my-angular-app $DOCKERHUB_CREDENTIALS_USR/my-angular-app:latest'
                     sh 'docker push $DOCKERHUB_CREDENTIALS_USR/my-angular-app:latest'
                 }
             }
